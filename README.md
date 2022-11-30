@@ -103,7 +103,7 @@ npm run serve
 
 ```js
 <template>
-  <TheHeader></TheHeader>
+  <TheHeader v-if="showHeader"></TheHeader>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -117,11 +117,26 @@ export default {
   components: {
     HelloWorld,
     TheHeader
+  },
+  data() {
+    return {
+      showHeader: false
+    }
   }
 }
 </script>
 
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -156,3 +171,10 @@ export default {
     }
 </style>
 ```
+
+#### Diretivas
+
+v-show="", _É dado um Display: None; no item, logo ainda é visível no código_
+v-if="", _O item sem sí não é adicionado no código_
+v-else-if="",
+v-else=""
