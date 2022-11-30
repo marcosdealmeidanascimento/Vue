@@ -78,4 +78,20 @@ createApp({
 
 ```
 sudo npm install -g @vue/cli
+
+vue --version
+```
+
+
+
+### Criando o App Vue CLI
+
+_*Na Raiz do Projeto (ou em /code/*_
+
+```
+vue create app
+
+cd app
+
+npm run serve
 ```
