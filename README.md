@@ -69,3 +69,12 @@ createApp({
     }
 }).mount('#app')
 ```
+
+### Instalando o npm
+
+[Node](https://nodejs.org/dist/v14.9.0/)
+
+### Instalando o Vue CLI
+
+sudo npm install -g @vue/cli
+
