@@ -175,6 +175,9 @@ export default {
 #### Diretivas
 
 v-show="" _É dado um Display: None; no item, logo ainda é visível no código_
+
 v-if="" _O item sem sí não é adicionado no código_
+
 v-else-if=""
+
 v-else=""
