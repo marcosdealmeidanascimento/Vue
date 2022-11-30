@@ -99,6 +99,9 @@ npm run serve
 
 ---
 
+_*app.vue*_
+
+```js
 <template>
   <TheHeader></TheHeader>
   <img alt="Vue logo" src="./assets/logo.png">
@@ -128,3 +131,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+```
