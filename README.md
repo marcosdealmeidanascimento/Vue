@@ -99,7 +99,7 @@ npm run serve
 
 ---
 
-_*app.vue*_
+**_app.vue_**
 
 ```js
 <template>
@@ -132,6 +132,9 @@ export default {
 }
 </style>
 ```
+
+**_/components/TheHeader.vue_**
+
 
 ```js
 <template>
