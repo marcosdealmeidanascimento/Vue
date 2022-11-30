@@ -76,6 +76,6 @@ createApp({
 
 ### Instalando o Vue CLI
 
-```linux
+```
 sudo npm install -g @vue/cli
 ```
