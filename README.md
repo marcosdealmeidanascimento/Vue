@@ -185,3 +185,18 @@ export default {
 **v-bind: || :**
 
 **v-model=""**
+
+**v-on:event="" || @event=""**
+
+##### Eventos
+
+[Eventos Vue](https://vuejs.org/guide/essentials/event-handling.html)
+
+
+
+##### PlaceHolders
+
+[Placeholder JS](https://jsonplaceholder.typicode.com/)
+[Placeholder JS Array](https://jsonplaceholder.typicode.com/todos/?_limit=5)
+
+[Placeholder Imagens](https://dummyimage.com/)
