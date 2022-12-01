@@ -1,51 +1,92 @@
 <template>
-  <TheHeader v-if="showHeader"></TheHeader>
+    
+    <div class="todos">
+        
+        <div v-for="(obj, index) in array" v-bind:key="obj.id">
+            <img v-if="obj.imgURL" :src="obj.imgURL">
+            {{ index }} - {{ obj.title }}
+        </div>
+        
+    </div>
 
-
-
-  <div v-show="showName">
-    <p>Nome: {{ name }}</p>
-    <p>Sobronenome: {{ lastname }}</p>
-  </div>
-
-  <div v-if="accessLevel === 'admin'">Usuário Admin</div>
-  <div v-else-if="accessLevel === 'marketing'">Usuário Marketing</div>
-  <div v-else>Usuário</div>
-
-
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TheHeader from './components/TheHeader.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    TheHeader
-  },
-  data() {
+name: 'App',
+components: {
+    
+},
+data() {
     return {
-      showHeader: true,
-      showName: true,
-      name: 'Gamer',
-      lastname: 'Pilk',
-      accessLevel: ''
+        
+        array: [
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "delectus aut autem",
+                "completed": false,
+                "imgURL": 'https://dummyimage.com/100x50/ff0/fff'
+            },
+            {
+                "userId": 1,
+                "id": 2,
+                "title": "quis ut nam et officia qui",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 3,
+                "title": "fugiat veniam dom minus",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 4,
+                "title": "et porro dum dum tempora",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 5,
+                "title": "laboriosam mollitia dome illum",
+                "completed": false
+            }
+        ]
     }
-  }
+}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+    margin: 0px;
+    padding: 0px;
 }
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.todos {
+    display: block; 
+    margin: 25px;
+    padding: 25px;
+    background-color: #d7a014;
+}
+
+.todos div{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.todos img {
+    margin: 0px;
+}
+
 </style>
