@@ -174,7 +174,9 @@ export default {
 </style>
 ```
 
-#### Diretivas
+---
+
+### Diretivas
 
 **v-show=""** _É dado um Display: None; no item, logo ainda é visível no código_
 
@@ -190,13 +192,12 @@ export default {
 
 **v-on:event="" || @event=""**
 
-##### Eventos
+### Eventos
 
 [Eventos Vue](https://vuejs.org/guide/essentials/event-handling.html)
 
 
-
-##### PlaceHolders
+### PlaceHolders
 
 [Placeholder JS](https://jsonplaceholder.typicode.com/)
 [Placeholder JS Array](https://jsonplaceholder.typicode.com/todos/?_limit=5)
