@@ -1,6 +1,6 @@
 # Vue JS
 
-## Componente Único
+### Componente Único
 
 ```js
 <template>
@@ -98,6 +98,8 @@ npm run serve
 
 
 ---
+
+# Exemplo de App .vue
 
 **_app.vue_**
 
