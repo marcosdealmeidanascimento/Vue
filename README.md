@@ -181,3 +181,5 @@ export default {
 **v-else-if=""**
 
 **v-else=""**
+
+**v-bind: || :**
