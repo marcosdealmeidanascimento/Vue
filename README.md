@@ -152,6 +152,7 @@ export default {
 
 **_/components/TheHeader.vue_**
 
+**_app.vue_**
 
 ```js
 <template>
@@ -203,3 +204,80 @@ export default {
 [Placeholder JS Array](https://jsonplaceholder.typicode.com/todos/?_limit=5)
 
 [Placeholder Imagens](https://dummyimage.com/)
+
+
+
+
+# Exemplo 2 de App .vue ( __app__v3.vue )
+
+**_app.vue_**
+
+```js
+<template>
+    <div>
+        <button @click="onClick" type="submit">Botao</button>
+        <p>{{ fullName }}</p>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'App',
+
+    data() {
+        return {
+            user: {
+                first_name: 'A',
+                last_name: 'B'
+            }
+        }
+    },
+
+    computed: {
+        fullName() {
+            return `${this.user.first_name} ${this.user.last_name}`  
+        },
+    },
+
+    methods: {
+        onClick(){
+            console.log(this.fullName)
+        } 
+    }
+}
+</script>
+
+<style>
+*{
+    margin: 0px;
+    padding: 20px;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+</style>
+```
+
+**_main.js_**
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+
+window.app = createApp(App).mount('#app') // Váriavel Global para Testar no Console
+```
+
+**_Console Localhost_**
+
+```js
+app // Retorna o Proxy do window.app
+
+app.user.first_name = 'TestePrimeiro'
+
+app.user.last_name = 'TesteÚltimo'
+
+```
