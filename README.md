@@ -1,5 +1,22 @@
 # Vue JS
 
+## Getting Started
+### Instalando o npm
+
+Instale o NodeJS para ter acesso ao comando npm, [Node](https://nodejs.org/dist/v14.9.0/)
+
+### Instalando o Vue CLI
+
+```
+npm --version 
+
+sudo npm install -g @vue/cli
+
+vue --version
+```
+
+---
+
 ### Componente Único
 
 ```js
@@ -69,19 +86,6 @@ createApp({
     }
 }).mount('#app')
 ```
-
-### Instalando o npm
-
-[Node](https://nodejs.org/dist/v14.9.0/)
-
-### Instalando o Vue CLI
-
-```
-sudo npm install -g @vue/cli
-
-vue --version
-```
-
 
 
 ### Criando o App Vue CLI
