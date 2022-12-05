@@ -2,11 +2,13 @@
     <div>
         <button @click="onClick" type="submit">Botao</button>
         <p>{{ fullName }}</p><br><br>
+        <h3>Todos Completadas</h3>
         <div v-for="todo in completedTodos"
         :key="todo.id">
             {{ todo.title }} <span> {{ todo.completed }}</span>
         </div>
         <br><br><br><br>
+        <h3>Todos Abertas</h3>
         <div v-for="todo in uncompletedTodos"
         :key="todo.id">
             {{ todo.title }} <span> {{ todo.completed }}</span>
