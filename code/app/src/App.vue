@@ -1,29 +1,32 @@
 <template>
     <div>
+        <BaseAlertVue variante="success"/>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'App',
-    components: {
+    import BaseAlertVue from './components/BaseAlert.vue';
+        export default {
+            name: 'App',
+            components: {
+                BaseAlertVue
 
-    },
+            },
 
-    data() {
-        return {
+            data() {
+                return {
+                }
+            },
+
+            watch: {
+            },
+
+            computed: {
+            },
+
+            methods: {
+            },
         }
-    },
-
-    watch: {
-    },
-
-    computed: {
-    },
-
-    methods: {
-    },
-}
 </script>
 
 <style>
