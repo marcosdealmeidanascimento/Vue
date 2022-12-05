@@ -1,14 +1,21 @@
 <template>
     <div>
+        <TheHeaderVue>
+            <template v-slot:title>
+                <h1>Sequência</h1>
+            </template>
+            <template v-slot:description>
+                <p>Segue em anexo:</p>
+            </template>
+        </TheHeaderVue>
     </div>
 </template>
 
 <script>
+import TheHeaderVue from './components/TheHeader.vue';
 export default {
     name: 'App',
-    components: {
-
-    },
+    components: { TheHeaderVue },
 
     data() {
         return {
