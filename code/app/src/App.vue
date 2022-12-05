@@ -1,18 +1,6 @@
 <template>
     <div>
-        <button @click="onClick" type="submit">Botao</button>
-        <p>{{ fullName }}</p><br><br>
-        <h3>Todos Completadas</h3>
-        <div v-for="todo in completedTodos"
-        :key="todo.id">
-            {{ todo.title }} <span> {{ todo.completed }}</span>
-        </div>
-        <br><br><br><br>
-        <h3>Todos Abertas</h3>
-        <div v-for="todo in uncompletedTodos"
-        :key="todo.id">
-            {{ todo.title }} <span> {{ todo.completed }}</span>
-        </div>
+
     </div>
 </template>
 
@@ -22,64 +10,13 @@ export default {
 
     data() {
         return {
-            user: {
-                first_name: 'A',
-                last_name: 'B'
-            },
-
-            todos: [
-                {
-                    "userId": 1,
-                    "id": 1,
-                    "title": "delectus aut autem",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 2,
-                    "title": "quis ut nam facilis et officia qui",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 3,
-                    "title": "fugiat veniam minus",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 4,
-                    "title": "et porro tempora",
-                    "completed": true
-                },
-                {
-                    "userId": 1,
-                    "id": 5,
-                    "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-                    "completed": false
-                }
-                ]
         }
     },
 
     computed: {
-        fullName() {
-            return `${this.user.first_name} ${this.user.last_name}`  
-        },
-
-        completedTodos() {
-            return this.todos.filter(todo => todo.completed)
-        },
-        
-        uncompletedTodos() {
-            return this.todos.filter(todo => !todo.completed)
-        }
     },
 
     methods: {
-        onClick(){
-            console.log(this.fullName)
-        } 
     }
 }
 </script>
