@@ -1,86 +1,45 @@
 <template>
     <div>
-        <button @click="onClick" type="submit">Botao</button>
-        <p>{{ fullName }}</p><br><br>
-        <h3>Todos Completadas</h3>
-        <div v-for="todo in completedTodos"
-        :key="todo.id">
-            {{ todo.title }} <span> {{ todo.completed }}</span>
-        </div>
-        <br><br><br><br>
-        <h3>Todos Abertas</h3>
-        <div v-for="todo in uncompletedTodos"
-        :key="todo.id">
-            {{ todo.title }} <span> {{ todo.completed }}</span>
-        </div>
+        <TheHeaderVue v-if="showHeader"/>
+        <h2>Teste h2</h2>
+        <input v-model="name" type="text">
+        <h3>{{ name }}</h3>
+        <button @click="showHeader = !showHeader">
+            Toggle Header
+        </button>
     </div>
 </template>
 
 <script>
+import TheHeaderVue from './components/TheHeader.vue';
 export default {
     name: 'App',
+    components: { TheHeaderVue },
 
     data() {
         return {
-            user: {
-                first_name: 'A',
-                last_name: 'B'
-            },
-
-            todos: [
-                {
-                    "userId": 1,
-                    "id": 1,
-                    "title": "delectus aut autem",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 2,
-                    "title": "quis ut nam facilis et officia qui",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 3,
-                    "title": "fugiat veniam minus",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 4,
-                    "title": "et porro tempora",
-                    "completed": true
-                },
-                {
-                    "userId": 1,
-                    "id": 5,
-                    "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-                    "completed": false
-                }
-                ]
+            name: 'Teste',
+            showHeader: true
         }
+    },
+
+    watch: {
     },
 
     computed: {
-        fullName() {
-            return `${this.user.first_name} ${this.user.last_name}`  
-        },
-
-        completedTodos() {
-            return this.todos.filter(todo => todo.completed)
-        },
-        
-        uncompletedTodos() {
-            return this.todos.filter(todo => !todo.completed)
-        }
     },
 
     methods: {
-        onClick(){
-            console.log(this.fullName)
-        } 
-    }
+    },
+
+    
+    beforeUpdate() {
+        console.log('beforeUpdate')
+    },
+
+    updated() {
+        console.log('updated')
+    },
 }
 </script>
 

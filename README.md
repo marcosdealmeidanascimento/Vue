@@ -181,22 +181,6 @@ export default {
 
 ---
 
-### Diretivas
-
-**v-show=""** _É dado um Display: None; no item, logo ainda é visível no código_
-
-**v-if=""** _O item sem sí não é adicionado no código_
-
-**v-else-if=""**
-
-**v-else=""**
-
-**v-bind: || :**
-
-**v-model=""**
-
-**v-on:event="" || @event=""**
-
 ### Eventos
 
 [Eventos Vue](https://vuejs.org/guide/essentials/event-handling.html)
