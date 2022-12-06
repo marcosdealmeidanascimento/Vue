@@ -11,36 +11,36 @@
 </template>
 
 <script>
-import TheHeaderVue from './components/TheHeader.vue';
-export default {
-    name: 'App',
-    components: { TheHeaderVue },
+    import TheHeaderVue from './components/TheHeader.vue';
+    export default {
+        name: 'App',
+        components: { TheHeaderVue },
 
-    data() {
-        return {
-            name: 'Teste',
-            showHeader: true
-        }
-    },
+        data() {
+            return {
+                name: 'Teste',
+                showHeader: true
+            }
+        },
 
-    watch: {
-    },
+        watch: {
+        },
 
-    computed: {
-    },
+        computed: {
+        },
 
-    methods: {
-    },
+        methods: {
+        },
 
-    
-    beforeUpdate() {
-        console.log('beforeUpdate')
-    },
+        
+        beforeUpdate() {
+            console.log('beforeUpdate')
+        },
 
-    updated() {
-        console.log('updated')
-    },
-}
+        updated() {
+            console.log('updated')
+        },
+    }
 </script>
 
 <style>

@@ -1,12 +1,37 @@
 <template>
-    <div :class="['alert', {'alert-success': variant === 'success'}]">
-        C
+    <div :class="(baseClass)">
+        {{ text }}
+
+        <button @click="onClick()">Ø</button>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['variant']
+        props: {
+            variant: {
+                type: String,
+                default: ''
+            },
+
+            text: {
+                type: String,
+                default: 'Text'
+            }
+        },
+
+        computed: {
+            baseClass() {
+                return ['alert', this.variant ? `alert-${this.variant}`: '']
+            },
+
+        },
+
+        methods: {
+            onClick() {
+                this.$emit('close')
+            }
+        }
     }
 </script>
 
@@ -27,5 +52,12 @@
     color: #fff;
     border-radius: 90px;
     transition: 5s;
+}
+
+.alert-danger {
+    background-color: #922;
+    color: #fff;
+    border-radius: 5px;
+    transition: 2s;
 }
 </style>

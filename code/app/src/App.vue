@@ -1,32 +1,25 @@
 <template>
-    <div>
-        <BaseAlertVue variant="success"/>
-    </div>
+    <HelloWorld>
+
+    </HelloWorld>
 </template>
 
 <script>
-    import BaseAlertVue from './components/BaseAlert.vue';
-        export default {
-            name: 'App',
-            components: {
-                BaseAlertVue
+import HelloWorld from './components/HelloWorld.vue';
 
-            },
+    HelloWorld
+    export default {
+        name: 'App',
+        components: {
+            HelloWorld
+        },
 
-            data() {
-                return {
-                }
-            },
+        data() {
+            return {
 
-            watch: {
-            },
-
-            computed: {
-            },
-
-            methods: {
-            },
+            }
         }
+    }
 </script>
 
 <style>

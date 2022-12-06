@@ -1,24 +1,24 @@
 <template>
     <div>
-        <TheHeaderVue>
-            <template v-slot:title>
-                <h1>Sequência</h1>
-            </template>
-            <template v-slot:description>
-                <p>Segue em anexo:</p>
-            </template>
-        </TheHeaderVue>
+        <BaseAlertVue v-if="showAlert" :variant="variant" @close="onClose()">
+            {{ text }}
+        </BaseAlertVue>
     </div>
 </template>
 
 <script>
-    import TheHeaderVue from './components/TheHeader.vue';
+    import BaseAlertVue from './components/BaseAlert.vue';
     export default {
         name: 'App',
-        components: { TheHeaderVue },
+        components: {
+            BaseAlertVue
+        },
 
         data() {
             return {
+                showAlert: true,
+                variant: 'success',
+                text: 'a',
             }
         },
 
@@ -29,6 +29,10 @@
         },
 
         methods: {
+            onClose() {
+                this.showAlert = false,
+                alert('OnClose')
+            }
         },
     }
 </script>

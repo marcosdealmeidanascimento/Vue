@@ -21,52 +21,52 @@
 
 <script>
 
-export default {
-    name: 'App',
+    export default {
+        name: 'App',
 
-    data() {
-        return {
-            name: "",
-            pageCount: 5,
-            user: {
-                first_name: "",
-                last_name: ""
-            }
-        }
-    },
-
-    watch: {
-        name(newValue) {
-            // console.log(newValue, oldValue)
-            if (newValue.length == 5) {
-                this.saveUsername()
+        data() {
+            return {
+                name: "",
+                pageCount: 5,
+                user: {
+                    first_name: "",
+                    last_name: ""
+                }
             }
         },
 
-        pageCount() {
-            this.changePage()
-        },
-        user: {
-            handler() {
-                console.log('User Alterado')
+        watch: {
+            name(newValue) {
+                // console.log(newValue, oldValue)
+                if (newValue.length == 5) {
+                    this.saveUsername()
+                }
             },
-            deep: true
-        }
-    },
 
-    computed: {
-    },
-
-    methods: {
-        saveUsername() {
-            console.log(this.name);
+            pageCount() {
+                this.changePage()
+            },
+            user: {
+                handler() {
+                    console.log('User Alterado')
+                },
+                deep: true
+            }
         },
 
-        changePage() {
-            console.log('sa')
+        computed: {
+        },
+
+        methods: {
+            saveUsername() {
+                console.log(this.name);
+            },
+
+            changePage() {
+                console.log('sa')
+            }
         }
     }
-}
 </script>
 
 <style>

@@ -22,71 +22,71 @@
 </template>
 
 <script>
-export default {
-    name: 'App',
+    export default {
+        name: 'App',
 
-    data() {
-        return {
-            user: {
-                first_name: 'A',
-                last_name: 'B'
+        data() {
+            return {
+                user: {
+                    first_name: 'A',
+                    last_name: 'B'
+                },
+
+                todos: [
+                    {
+                        "userId": 1,
+                        "id": 1,
+                        "title": "delectus aut autem",
+                        "completed": false
+                    },
+                    {
+                        "userId": 1,
+                        "id": 2,
+                        "title": "quis ut nam facilis et officia qui",
+                        "completed": false
+                    },
+                    {
+                        "userId": 1,
+                        "id": 3,
+                        "title": "fugiat veniam minus",
+                        "completed": false
+                    },
+                    {
+                        "userId": 1,
+                        "id": 4,
+                        "title": "et porro tempora",
+                        "completed": true
+                    },
+                    {
+                        "userId": 1,
+                        "id": 5,
+                        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                        "completed": false
+                    }
+                    ]
+            }
+        },
+
+        computed: {
+            fullName() {
+                return `${this.user.first_name} ${this.user.last_name}`  
             },
 
-            todos: [
-                {
-                    "userId": 1,
-                    "id": 1,
-                    "title": "delectus aut autem",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 2,
-                    "title": "quis ut nam facilis et officia qui",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 3,
-                    "title": "fugiat veniam minus",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 4,
-                    "title": "et porro tempora",
-                    "completed": true
-                },
-                {
-                    "userId": 1,
-                    "id": 5,
-                    "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-                    "completed": false
-                }
-                ]
-        }
-    },
-
-    computed: {
-        fullName() {
-            return `${this.user.first_name} ${this.user.last_name}`  
+            completedTodos() {
+                return this.todos.filter(todo => todo.completed)
+            },
+            
+            uncompletedTodos() {
+                return this.todos.filter(todo => !todo.completed)
+            }
         },
 
-        completedTodos() {
-            return this.todos.filter(todo => todo.completed)
-        },
-        
-        uncompletedTodos() {
-            return this.todos.filter(todo => !todo.completed)
+        methods: {
+            onClick(){
+                console.log(this.fullName)
+            } 
         }
-    },
-
-    methods: {
-        onClick(){
-            console.log(this.fullName)
-        } 
     }
-}
 </script>
 
 <style>
