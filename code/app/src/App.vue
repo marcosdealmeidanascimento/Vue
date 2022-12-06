@@ -1,6 +1,6 @@
 <template>
     <div>
-        <BaseAlertVue variante="success"/>
+        <BaseAlertVue variant="success"/>
     </div>
 </template>
 

@@ -1,14 +1,12 @@
 <template>
-    <div class="['alert', {'alert-success': variant}]">
+    <div :class="['alert', {'alert-success': variant === 'success'}]">
         C
     </div>
 </template>
 
 <script>
     export default {
-        props: [
-            'variant'
-        ]
+        props: ['variant']
     }
 </script>
 
