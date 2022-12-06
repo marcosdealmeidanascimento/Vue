@@ -1,46 +1,32 @@
 <template>
     <div>
-        <TheHeaderVue v-if="showHeader"/>
-        <h2>Teste h2</h2>
-        <input v-model="name" type="text">
-        <h3>{{ name }}</h3>
-        <button @click="showHeader = !showHeader">
-            Toggle Header
-        </button>
+        <BaseAlertVue variante="success"/>
     </div>
 </template>
 
 <script>
-import TheHeaderVue from './components/TheHeader.vue';
-export default {
-    name: 'App',
-    components: { TheHeaderVue },
+    import BaseAlertVue from './components/BaseAlert.vue';
+        export default {
+            name: 'App',
+            components: {
+                BaseAlertVue
 
-    data() {
-        return {
-            name: 'Teste',
-            showHeader: true
+            },
+
+            data() {
+                return {
+                }
+            },
+
+            watch: {
+            },
+
+            computed: {
+            },
+
+            methods: {
+            },
         }
-    },
-
-    watch: {
-    },
-
-    computed: {
-    },
-
-    methods: {
-    },
-
-    
-    beforeUpdate() {
-        console.log('beforeUpdate')
-    },
-
-    updated() {
-        console.log('updated')
-    },
-}
 </script>
 
 <style>

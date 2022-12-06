@@ -1,6 +1,7 @@
 <template>
     <header class="header">
-        Header
+        <slot v-if="$slots.title" name="title"></slot>
+        <slot name="description"></slot>
     </header>
 </template>
 
