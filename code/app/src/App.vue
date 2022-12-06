@@ -1,24 +1,39 @@
 <template>
-    <HelloWorld>
-
-    </HelloWorld>
+    <div>
+        <BaseAlertVue v-if="showAlert" :variant="variant" @close="onClose()">
+            {{ text }}
+        </BaseAlertVue>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
-    HelloWorld
+    import BaseAlertVue from './components/BaseAlert.vue';
     export default {
         name: 'App',
         components: {
-            HelloWorld
+            BaseAlertVue
         },
 
         data() {
             return {
-
+                showAlert: true,
+                variant: 'success',
+                text: 'a',
             }
-        }
+        },
+
+        watch: {
+        },
+
+        computed: {
+        },
+
+        methods: {
+            onClose() {
+                this.showAlert = false,
+                alert('OnClose')
+            }
+        },
     }
 </script>
 
